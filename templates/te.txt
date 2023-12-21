@@ -1,0 +1,9 @@
+EMAIL = "njsreactdom@gmail.com"
+PASSWORD = "vaweeqqzwmjakwoj"
+onsubmit="return validatePasswordAndRedirect()"  enctype="multipart/form-data"
+user_answers.get(f'question_{api_response.index(question) + 1}')
+
+
+
+
+{&amp;#39;email&amp;#39;: &amp;#39;yashasmacair@gmail.com&amp;#39;, &amp;#39;username&amp;#39;: &amp;#39;Yashas J Kumar&amp;#39;}

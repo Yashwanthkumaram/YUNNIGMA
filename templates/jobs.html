@@ -1,0 +1,116 @@
+{% include "header.html" %}
+    <title>Job Opportunities</title>
+
+    <style>
+      .top-left-button {
+            position: fixed;
+            top: 20px;
+            left: 50px;
+        }
+        /* Add styling for job containers */
+        .jobs-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+
+        .job-card {
+            width: 30%; /* Set the width as needed */
+            border: 2px solid cornflowerblue;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            color: black;
+            background-color: white;
+            transition: transform 0.3s ease;
+        }
+        .job-card:hover {
+            transform: scale(1.05);
+            background-color: lightblue; /* Scale up by 5% on hover */
+            border: 2px solid white;
+        }
+
+        .company-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: blue;
+        }
+
+        .skills {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .job-role {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .annual-package {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="top-left-button">
+    <button onclick="goBack()" class="btn btn-outline-danger">Go Back</button>
+  </div>
+
+    <h1 style="color: white; font-size: 50px;">Job Opportunities</h1>
+  <br><br>
+    <div class="jobs-container">
+        <!-- Container 1 -->
+        <div class="job-card">
+            <div class="company-name" name="c_name"><b>Amazon</b></div>
+            <div class="skills"><b>Skills: </b>Java, JavaScript, HTML, CSS</div>
+            <div class="job-role"><b>Job Role:</b> Full Stack Developer</div>
+            <div class="annual-package"><b>Annual Package: </b>24 LPA</div><br>
+            <a href="{{ url_for('exam_page', c_name = 'Amazon') }}">
+            <button class="btn btn-outline-primary">Apply Now</button>
+            </a>
+        </div>
+        <!-- Container 2 -->
+        <div class="job-card">
+            <div class="company-name"><b>Flipkart</b></div>
+            <div class="skills"><b>Skills: </b>Python, Django, SQL</div>
+            <div class="job-role"><b>Job Role: </b>Python Developer</div>
+            <div class="annual-package"><b>Annual Package: </b>30 LPA</div><br>
+            <a href="{{ url_for('exam_page', c_name = 'Flipkart') }}">
+            <button class="btn btn-outline-primary">Apply Now</button>
+            </a>
+        </div>
+
+        <!-- Container 3 -->
+        <div class="job-card">
+            <div class="company-name"><b>Microsoft</b></div>
+            <div class="skills"><b>Skills: </b>React, Node.js, MongoDB</div>
+            <div class="job-role"><b>Job Role: </b>Frontend Developer</div>
+            <div class="annual-package"><b>Annual Package: </b>26 LPA</div><br>
+            <a href="{{ url_for('exam_page', c_name = 'Microsoft') }}">
+            <button class="btn btn-outline-primary">Apply Now</button>
+            </a>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script>
+        // function applyNow() {
+        //     // Handle the "Apply Now" button click event
+        //     window.location.href = "{{ url_for('exam_page', c_name = "Amazon") }}";
+        //     // You can implement the actual application process here
+        // }
+
+        function goBack() {
+            window.location.href = "{{ url_for('student_home', username = username)}}";
+        }
+
+
+    </script>
+
+</body>
+</html>
